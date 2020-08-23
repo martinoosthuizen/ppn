@@ -1,39 +1,29 @@
 <template>
-  <div>
-    <div v-if="!$subReady.Leaders">Loading...</div>
-    <div v-else>
-      <p v-for="leader in leaders" :key="leader._id">
-        {{ leader.name }}
-      </p>
-    </div>
+  <div class="app">
+    <router-view class="route-content"></router-view>
   </div>
 </template>
 
 <script>
-import "../imports/api/leaders/collection";
-import { Leaders } from "../imports/api/leaders/collection";
-
 export default {
   data() {
-    return {
-      date: new Date(),
-    };
-  },
-
-  meteor: {
-    $subscribe: {
-      Leaders: [],
-    },
-    leaders() {
-      return Leaders.find({});
-    },
+    return {};
   },
 };
 </script>
 
 <style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #000011;
+  background-image: url("/images/backgrounds/rushmore.jpg");
+  background-size: cover;
 }
 </style>
