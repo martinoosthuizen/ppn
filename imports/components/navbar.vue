@@ -1,9 +1,23 @@
 <template>
   <div class="navbar">
-    <div></div>
-    <div class="nav-button">SIGN IN</div>
+    <div>
+      <img
+        v-if="showBackBtn"
+        @click="$router.push('/')"
+        src="/images/back.svg"
+        width="20"
+        class="nav-button"
+      />
+    </div>
+    <div class="nav-link">SIGN IN</div>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["showBackBtn"],
+};
+</script>
 
 <style scoped>
 .navbar {
@@ -16,16 +30,20 @@
   align-items: center;
   height: 60px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   box-sizing: border-box;
 }
 
-.nav-button {
+.nav-link {
   color: white;
   text-align: right;
   font-family: acumin-pro-extra-condensed, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
+}
+
+.nav-button {
+  cursor: pointer;
 }
 </style>

@@ -44,4 +44,10 @@ export default {};
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 1px;
 }
+
+@media (max-width: 420px) {
+  .tagline {
+    font-size: 18px;
+  }
+}
 </style>
