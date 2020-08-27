@@ -27,7 +27,7 @@ export default {};
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 12vh;
+  font-size: 60px;
   color: white;
   line-height: 42px;
 }
@@ -43,5 +43,11 @@ export default {};
   font-size: 30px;
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 1px;
+}
+
+@media (max-width: 420px) {
+  .tagline {
+    font-size: 18px;
+  }
 }
 </style>

@@ -8,6 +8,7 @@ const routerFactory = new RouterFactory({
 
 // Components
 import Leaders from "../imports/views/Leaders.vue";
+import LeaderProfile from "../imports/views/LeaderProfile.vue";
 
 RouterFactory.configure((factory) => {
   // Simple routes
@@ -16,6 +17,11 @@ RouterFactory.configure((factory) => {
       path: "/",
       name: "leaders",
       component: Leaders,
+    },
+    {
+      path: "/leader/:id",
+      name: "leader-profile",
+      component: LeaderProfile,
     },
   ]);
 });

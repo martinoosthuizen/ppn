@@ -6,7 +6,8 @@
     ></div>
     <div class="leader-description">
       <div>
-        <span class="heading">{{ leader.designation }} {{ leader.name }}</span
+        <span class="heading" style="color: black"
+          >{{ leader.designation }} {{ leader.name }}</span
         ><br />
         <span class="subheading">{{ leader.country }}</span>
       </div>
@@ -25,6 +26,7 @@ export default {
 .leader-card {
   height: 430px;
   width: 340px;
+  min-width: 340px;
   max-width: calc(100vw - 10px);
   background-color: white;
   display: flex;
@@ -33,7 +35,7 @@ export default {
   align-content: center;
   align-items: center;
   border-radius: 5px;
-  margin: 10px;
+  cursor: pointer;
 }
 
 .leader-image {

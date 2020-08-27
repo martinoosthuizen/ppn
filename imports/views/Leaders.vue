@@ -12,6 +12,8 @@
         :key="leader._id"
         :leader="leader"
         class="heading"
+        style="margin: 10px"
+        @click.native="$router.push(`/leader/${leader._id}`)"
       >
         {{ leader.name }}
       </leader-card>
@@ -46,6 +48,7 @@ export default {
 <style scoped>
 .leaders-view {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -78,5 +81,18 @@ export default {
   overflow-y: hidden;
   overflow-x: scroll;
   margin-top: 10px;
+}
+
+.leader-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .leader-carousel {
+    justify-content: flex-start;
+  }
+  .instructions {
+    font-size: 20px;
+  }
 }
 </style>
